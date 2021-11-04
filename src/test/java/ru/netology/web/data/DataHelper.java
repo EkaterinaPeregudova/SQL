@@ -8,7 +8,6 @@ public class DataHelper {
         private String id;
         private String login;
         private String password;
-
     }
 
 
