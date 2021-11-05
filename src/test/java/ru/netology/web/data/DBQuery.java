@@ -32,11 +32,14 @@ public class DBQuery {
     }
 
     @SneakyThrows
-    public static void dropDB() {
+    public static void deleteFromDB() {
         val conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/appdb", "user", "password"
         );
-        runner.execute(conn, "DROP DATABASE appdb");
+        runner.execute(conn, "DELETE FROM users");
+        runner.execute(conn, "DELETE FROM auth_codes");
+        runner.execute(conn, "DELETE FROM cards");
+        runner.execute(conn, "DELETE FROM card_transactions");
     }
 
 }

@@ -44,7 +44,7 @@ public class TestSql {
 
     @AfterAll
     static void cleanDB() {
-        dropDB();
+        deleteFromDB();
     }
 
 }
