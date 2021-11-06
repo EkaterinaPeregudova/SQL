@@ -36,10 +36,10 @@ public class DBQuery {
         val conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/appdb", "user", "password"
         );
-        runner.execute(conn, "DELETE FROM users");
         runner.execute(conn, "DELETE FROM auth_codes");
         runner.execute(conn, "DELETE FROM cards");
         runner.execute(conn, "DELETE FROM card_transactions");
+        runner.execute(conn, "DELETE FROM users");
     }
 
 }
